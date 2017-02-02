@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="findRoomyCheckBoxCollectionViewCell" id="gTV-IL-0wX" customClass="FindRoomyCheckBoxCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="243" height="45"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="243" height="45"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmT-0q-dAz">
+                        <rect key="frame" x="18" y="0.0" width="122" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="122" id="qkO-cY-oKD"/>
+                            <constraint firstAttribute="height" constant="45" id="zMQ-wL-Rib"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkbox-empty" translatesAutoresizingMaskIntoConstraints="NO" id="ERN-J3-342">
+                        <rect key="frame" x="212" y="17" width="13" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="GJf-8k-K4k"/>
+                            <constraint firstAttribute="width" constant="13" id="zzw-gi-Z1s"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="BmT-0q-dAz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ICe-20-Uta"/>
+                <constraint firstAttribute="bottom" secondItem="ERN-J3-342" secondAttribute="bottom" constant="15" id="QaH-PN-E5F"/>
+                <constraint firstItem="ERN-J3-342" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="17" id="XXL-zV-93P"/>
+                <constraint firstAttribute="trailing" secondItem="ERN-J3-342" secondAttribute="trailing" constant="18" id="jzY-xl-dI4"/>
+                <constraint firstItem="BmT-0q-dAz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="18" id="k34-JJ-BW1"/>
+                <constraint firstAttribute="bottom" secondItem="BmT-0q-dAz" secondAttribute="bottom" id="sEn-9Q-qWr"/>
+            </constraints>
+            <size key="customSize" width="248" height="50"/>
+            <connections>
+                <outlet property="checkBoxImageView" destination="ERN-J3-342" id="a84-Hd-jOk"/>
+                <outlet property="checkboxNameLabel" destination="BmT-0q-dAz" id="pKE-37-VZd"/>
+            </connections>
+            <point key="canvasLocation" x="292.5" y="361.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox-empty" width="13" height="13"/>
+    </resources>
+</document>

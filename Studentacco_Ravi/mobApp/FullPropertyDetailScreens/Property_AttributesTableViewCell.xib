@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="property_AttributesTableViewCell" rowHeight="55" id="KGk-i7-Jjw" customClass="Property_AttributesTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-IV-xmc">
+                        <rect key="frame" x="8" y="8" width="126" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="4Bw-Qp-bzp"/>
+                            <constraint firstAttribute="width" constant="126" id="b0W-Cu-RgI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map-marker" translatesAutoresizingMaskIntoConstraints="NO" id="eou-0c-Ts9">
+                        <rect key="frame" x="8" y="32" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="Bu4-TK-FF8"/>
+                            <constraint firstAttribute="height" constant="12" id="ZmK-jm-hnZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRQ-g1-tg1">
+                        <rect key="frame" x="34" y="29" width="278" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="278" id="iGU-TM-N1Z"/>
+                            <constraint firstAttribute="height" constant="18" id="pFN-nb-L6m"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jB-DR-BpU">
+                        <rect key="frame" x="214" y="8" width="98" height="21"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.25882352939999997" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2kV-pD-7f7"/>
+                            <constraint firstAttribute="width" constant="98" id="lL6-R8-V4W"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="13"/>
+                        <state key="normal" title="Schedule a visit">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JRQ-g1-tg1" firstAttribute="leading" secondItem="eou-0c-Ts9" secondAttribute="trailing" constant="14" id="4Up-9X-OnH"/>
+                    <constraint firstAttribute="trailing" secondItem="7jB-DR-BpU" secondAttribute="trailing" constant="8" id="65G-co-ERO"/>
+                    <constraint firstItem="7jB-DR-BpU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VRJ-h0-uhv"/>
+                    <constraint firstItem="bqy-IV-xmc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="WDR-Rw-N5x"/>
+                    <constraint firstItem="eou-0c-Ts9" firstAttribute="top" secondItem="bqy-IV-xmc" secondAttribute="bottom" constant="3" id="cpd-nx-fQv"/>
+                    <constraint firstItem="JRQ-g1-tg1" firstAttribute="top" secondItem="bqy-IV-xmc" secondAttribute="bottom" id="fkj-3r-C7g"/>
+                    <constraint firstItem="eou-0c-Ts9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="wlw-77-O1k"/>
+                    <constraint firstItem="bqy-IV-xmc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="yBk-q3-0jw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="accoIdLabel" destination="bqy-IV-xmc" id="RUV-tf-XMh"/>
+                <outlet property="addressLabel" destination="JRQ-g1-tg1" id="J6W-X7-k6O"/>
+                <outlet property="scheduleButton" destination="7jB-DR-BpU" id="Dn1-EF-XUF"/>
+            </connections>
+            <point key="canvasLocation" x="403" y="203.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="map-marker" width="12" height="12"/>
+    </resources>
+</document>

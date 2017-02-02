@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="termConditionTableViewCell" rowHeight="70" id="KGk-i7-Jjw" customClass="TermConditionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYw-Lp-Ja5">
+                        <rect key="frame" x="51" y="6" width="133" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="133" id="GiN-3h-xXb"/>
+                            <constraint firstAttribute="height" constant="21" id="UTQ-ye-uwx"/>
+                        </constraints>
+                        <attributedString key="attributedText">
+                            <fragment content="I agree to Studentacco ">
+                                <attributes>
+                                    <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-MC-ROw">
+                        <rect key="frame" x="20" y="35" width="280" height="34"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.25882352939999997" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="98Q-sM-P7R"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="19"/>
+                        <state key="normal" title="Sign Up">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWn-Ws-d4r">
+                        <rect key="frame" x="20" y="6" width="16" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="en1-m7-oYh"/>
+                            <constraint firstAttribute="height" constant="22" id="ybw-g6-cO5"/>
+                        </constraints>
+                        <state key="normal" image="checkbox-grey"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz2-ZX-QqO">
+                        <rect key="frame" x="186" y="8" width="115" height="18"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="115" id="4N4-RW-cQB"/>
+                            <constraint firstAttribute="height" constant="18" id="8IO-YU-tYX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="terms &amp; conditions ">
+                            <color key="titleColor" red="0.2274509804" green="0.29411764709999999" blue="0.88707652732147646" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RWn-Ws-d4r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="55A-FT-uYv"/>
+                    <constraint firstItem="Tz2-ZX-QqO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7NZ-Sb-bQb"/>
+                    <constraint firstItem="JYw-Lp-Ja5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="9fE-3d-0Cc"/>
+                    <constraint firstItem="JYw-Lp-Ja5" firstAttribute="leading" secondItem="RWn-Ws-d4r" secondAttribute="trailing" constant="15" id="GyZ-a1-EQz"/>
+                    <constraint firstAttribute="trailing" secondItem="Rhf-MC-ROw" secondAttribute="trailing" constant="20" id="LFr-ch-jT3"/>
+                    <constraint firstItem="Tz2-ZX-QqO" firstAttribute="leading" secondItem="RWn-Ws-d4r" secondAttribute="trailing" constant="150" id="OZ4-fe-NcG"/>
+                    <constraint firstAttribute="bottom" secondItem="Rhf-MC-ROw" secondAttribute="bottom" id="P2d-HO-Dsr"/>
+                    <constraint firstItem="RWn-Ws-d4r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="ScF-E5-Fpv"/>
+                    <constraint firstItem="Rhf-MC-ROw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="buS-0O-1WA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="TermsConditionButton" destination="Tz2-ZX-QqO" id="vbu-zV-Lu7"/>
+                <outlet property="agreeButton" destination="RWn-Ws-d4r" id="fVT-b5-JK2"/>
+                <outlet property="submitButton" destination="Rhf-MC-ROw" id="9cA-xq-lsu"/>
+            </connections>
+            <point key="canvasLocation" x="394" y="309"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkbox-grey" width="16" height="16"/>
+    </resources>
+</document>

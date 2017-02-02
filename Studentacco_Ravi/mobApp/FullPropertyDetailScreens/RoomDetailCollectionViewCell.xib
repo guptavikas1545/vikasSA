@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="7.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RoomDetailCollectionViewCell" id="gTV-IL-0wX" customClass="RoomDetailCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Attached toilet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cE-4Z-Rg3">
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet-icon" translatesAutoresizingMaskIntoConstraints="NO" id="w3b-hf-tfe">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="IWb-wx-Ftr"/>
+                            <constraint firstAttribute="height" constant="16" id="Kzc-LT-z0t"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3cE-4Z-Rg3" secondAttribute="bottom" id="345-l5-UiS"/>
+                <constraint firstItem="3cE-4Z-Rg3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="67s-NC-gbX"/>
+                <constraint firstItem="3cE-4Z-Rg3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ACE-wu-2mz"/>
+                <constraint firstItem="w3b-hf-tfe" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="BsE-Nn-VWG"/>
+                <constraint firstAttribute="bottom" secondItem="3cE-4Z-Rg3" secondAttribute="bottom" id="GPl-3H-PDS"/>
+                <constraint firstItem="3cE-4Z-Rg3" firstAttribute="leading" secondItem="w3b-hf-tfe" secondAttribute="trailing" constant="5" id="Sls-gW-BtN"/>
+                <constraint firstItem="3cE-4Z-Rg3" firstAttribute="centerY" secondItem="w3b-hf-tfe" secondAttribute="centerY" constant="-1" id="W9R-gd-gP6"/>
+                <constraint firstAttribute="trailing" secondItem="3cE-4Z-Rg3" secondAttribute="trailing" id="bdP-KB-KdP"/>
+                <constraint firstItem="w3b-hf-tfe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="iYG-aE-wN6"/>
+                <constraint firstItem="3cE-4Z-Rg3" firstAttribute="centerY" secondItem="w3b-hf-tfe" secondAttribute="centerY" id="js4-d0-w8G"/>
+            </constraints>
+            <size key="customSize" width="172" height="65"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="BsE-Nn-VWG"/>
+                    <exclude reference="ACE-wu-2mz"/>
+                    <exclude reference="GPl-3H-PDS"/>
+                    <exclude reference="js4-d0-w8G"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="roomDetailImageView" destination="w3b-hf-tfe" id="IMM-pm-VRk"/>
+                <outlet property="roomDetailTitleLabel" destination="3cE-4Z-Rg3" id="dRF-Ms-ee5"/>
+            </connections>
+            <point key="canvasLocation" x="174.5" y="242"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="toilet-icon" width="16" height="16"/>
+    </resources>
+</document>

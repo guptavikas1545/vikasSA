@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="find_RoomyTableViewCell" id="KGk-i7-Jjw" customClass="Find_RoomyTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Qqk-UC-wDE">
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="zdO-Ip-4cf">
+                            <size key="itemSize" width="187" height="45"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Qqk-UC-wDE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="JPs-6I-L9F"/>
+                    <constraint firstAttribute="bottom" secondItem="Qqk-UC-wDE" secondAttribute="bottom" constant="-1" id="TPs-yX-VKq"/>
+                    <constraint firstItem="Qqk-UC-wDE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="h4l-BV-CC3"/>
+                    <constraint firstAttribute="trailing" secondItem="Qqk-UC-wDE" secondAttribute="trailing" id="uwm-Qr-bCL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="Find_RoomyCollectionView" destination="Qqk-UC-wDE" id="3Dd-qS-zO5"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="69"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectCityViewController">
+            <connections>
+                <outlet property="cityListTableView" destination="O7r-E6-rgN" id="Hh6-03-2pm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0Y-P4-w6Q">
+                    <rect key="frame" x="118" y="31" width="85" height="22"/>
+                    <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-Io-KVd">
+                    <rect key="frame" x="280" y="29" width="24" height="24"/>
+                    <state key="normal" image="cross-icon">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissSelectCityView:" destination="-1" eventType="touchUpInside" id="fqR-zG-dbp"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d97-2h-y82">
+                    <rect key="frame" x="8" y="72" width="304" height="46"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use my current city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-h9-TVR">
+                            <rect key="frame" x="8" y="8" width="149" height="31"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbK-k0-Znl">
+                            <rect key="frame" x="265" y="10" width="26" height="26"/>
+                            <state key="normal" image="current-location">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgS-Jr-CEt">
+                            <rect key="frame" x="0.0" y="0.0" width="304" height="46"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="304" id="25Z-mx-Asz"/>
+                                <constraint firstAttribute="height" constant="46" id="6Hg-a7-0tF"/>
+                            </constraints>
+                            <connections>
+                                <action selector="getCurrentLocation:" destination="-1" eventType="touchUpInside" id="4t1-Po-jMN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.91764705879999997" green="0.30588235289999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="cbK-k0-Znl" firstAttribute="top" secondItem="d97-2h-y82" secondAttribute="top" constant="10" id="7Iq-xP-fEi"/>
+                        <constraint firstItem="ysK-h9-TVR" firstAttribute="top" secondItem="d97-2h-y82" secondAttribute="top" constant="8" id="AGH-ib-5FF"/>
+                        <constraint firstAttribute="bottom" secondItem="cbK-k0-Znl" secondAttribute="bottom" constant="10" id="QOr-jL-sla"/>
+                        <constraint firstAttribute="bottom" secondItem="ysK-h9-TVR" secondAttribute="bottom" constant="7" id="YRD-y8-EIo"/>
+                        <constraint firstAttribute="height" constant="46" id="fE7-hT-dIE"/>
+                        <constraint firstItem="DgS-Jr-CEt" firstAttribute="top" secondItem="d97-2h-y82" secondAttribute="top" id="iJ6-i2-2Zw"/>
+                        <constraint firstItem="ysK-h9-TVR" firstAttribute="leading" secondItem="d97-2h-y82" secondAttribute="leading" constant="8" id="m86-2T-HBB"/>
+                        <constraint firstAttribute="trailing" secondItem="DgS-Jr-CEt" secondAttribute="trailing" id="w25-GV-FXK"/>
+                        <constraint firstAttribute="bottom" secondItem="DgS-Jr-CEt" secondAttribute="bottom" id="wCW-vf-ydD"/>
+                        <constraint firstItem="DgS-Jr-CEt" firstAttribute="leading" secondItem="d97-2h-y82" secondAttribute="leading" id="wga-Al-1Qn"/>
+                        <constraint firstAttribute="trailing" secondItem="cbK-k0-Znl" secondAttribute="trailing" constant="13" id="yvI-pQ-x48"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="40" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="O7r-E6-rgN">
+                    <rect key="frame" x="0.0" y="150" width="320" height="330"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="t9M-bj-y2i"/>
+                        <outlet property="delegate" destination="-1" id="Mw7-EW-Xro"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.29803921568627451" green="0.27450980392156865" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="O7r-E6-rgN" firstAttribute="top" secondItem="d97-2h-y82" secondAttribute="bottom" constant="32" id="FV5-0H-ve5"/>
+                <constraint firstItem="O7r-E6-rgN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GYZ-ps-d1t"/>
+                <constraint firstItem="Z0Y-P4-w6Q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZOp-7J-UeP"/>
+                <constraint firstAttribute="trailing" secondItem="O7r-E6-rgN" secondAttribute="trailing" id="aeQ-gk-Swm"/>
+                <constraint firstItem="d97-2h-y82" firstAttribute="top" secondItem="FBq-Io-KVd" secondAttribute="bottom" constant="19" id="bSf-im-Wdn"/>
+                <constraint firstItem="FBq-Io-KVd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="rNV-5B-DlB"/>
+                <constraint firstAttribute="trailing" secondItem="FBq-Io-KVd" secondAttribute="trailing" constant="16" id="sMi-8F-Vpl"/>
+                <constraint firstAttribute="trailing" secondItem="d97-2h-y82" secondAttribute="trailing" constant="8" id="vU1-H3-OS5"/>
+                <constraint firstItem="d97-2h-y82" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="xWZ-Hh-nmS"/>
+                <constraint firstItem="Z0Y-P4-w6Q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="31" id="zAC-Gb-pDR"/>
+                <constraint firstAttribute="bottom" secondItem="O7r-E6-rgN" secondAttribute="bottom" id="zn4-oC-vCr"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="290" y="33"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross-icon" width="24" height="24"/>
+        <image name="current-location" width="26" height="26"/>
+    </resources>
+</document>

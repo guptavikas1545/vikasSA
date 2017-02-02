@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </mutableArray>
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseRulesTableViewCellId" rowHeight="114" id="KGk-i7-Jjw" customClass="HouseRulesTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOUSE RULES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fur-79-TPa">
+                        <rect key="frame" x="20" y="16" width="102" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="TY8-AR-PM6"/>
+                            <constraint firstAttribute="width" constant="102" id="U6R-YM-2mH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="smoking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rN9-89-NNu">
+                        <rect key="frame" x="40" y="40" width="51" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="3lj-O4-GDv"/>
+                            <constraint firstAttribute="height" constant="16" id="5GV-QV-OiE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.46714796029668404" green="0.46714796029668404" blue="0.46714796029668404" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="5xU-kc-YFJ">
+                        <rect key="frame" x="120" y="40" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="KTK-QZ-dLJ"/>
+                            <constraint firstAttribute="width" constant="16" id="s1U-bp-cCJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-veg food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjj-WQ-n1h">
+                        <rect key="frame" x="141" y="40" width="81" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="81" id="7XH-AS-J4a"/>
+                            <constraint firstAttribute="height" constant="16" id="LSu-dL-KKB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.46714796029668404" green="0.46714796029668404" blue="0.46714796029668404" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="Rl4-6S-yxg">
+                        <rect key="frame" x="18" y="71" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="AEs-mt-ygC"/>
+                            <constraint firstAttribute="height" constant="16" id="pF4-Un-jnC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Girls allowed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZo-td-tm6">
+                        <rect key="frame" x="40" y="71" width="77" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="2N4-E7-iUE"/>
+                            <constraint firstAttribute="width" constant="77" id="o1t-eS-WTe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.46714796029668404" green="0.46714796029668404" blue="0.46714796029668404" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="wk9-uX-ZcA">
+                        <rect key="frame" x="120" y="71" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="X23-lL-PEm"/>
+                            <constraint firstAttribute="width" constant="16" id="viH-BP-C1j"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boys allowed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-ZT-Hws">
+                        <rect key="frame" x="141" y="70" width="77" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="UFU-HJ-0bn"/>
+                            <constraint firstAttribute="width" constant="77" id="rH8-hG-YGA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.46714796029668404" green="0.46714796029668404" blue="0.46714796029668404" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="R3O-xo-63d">
+                        <rect key="frame" x="226" y="71" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="cdf-4F-Tdm"/>
+                            <constraint firstAttribute="width" constant="16" id="gcD-an-rnz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admission process followed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCL-R8-Zst">
+                        <rect key="frame" x="249" y="68" width="112" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="112" id="Adm-ds-cFv"/>
+                            <constraint firstAttribute="height" constant="34" id="YM4-4z-npa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.46714796029668404" green="0.46714796029668404" blue="0.46714796029668404" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvP-mf-1tC">
+                        <rect key="frame" x="0.0" y="105" width="366" height="8"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="rfv-2n-IBA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="8og-wo-tPB">
+                        <rect key="frame" x="226" y="40" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="48f-G3-Y36"/>
+                            <constraint firstAttribute="width" constant="16" id="jve-v2-onj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcohol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83t-Zf-I9s">
+                        <rect key="frame" x="249" y="40" width="47" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="fcd-Mh-0jx"/>
+                            <constraint firstAttribute="width" constant="47" id="nA5-xj-O4j"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" red="0.46714796029668404" green="0.46714796029668404" blue="0.46714796029668404" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-xg-beA">
+                        <rect key="frame" x="18" y="40" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="SY0-mZ-qh7"/>
+                            <constraint firstAttribute="width" constant="16" id="VHa-ZY-mjd"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="top" secondItem="8og-wo-tPB" secondAttribute="bottom" constant="15" id="1Ul-Lo-WAS"/>
+                    <constraint firstItem="rZo-td-tm6" firstAttribute="leading" secondItem="Rl4-6S-yxg" secondAttribute="trailing" constant="6" id="6bN-mf-l6z"/>
+                    <constraint firstItem="rN9-89-NNu" firstAttribute="top" secondItem="1Wa-xg-beA" secondAttribute="top" id="6nd-Yc-k3D"/>
+                    <constraint firstItem="rN9-89-NNu" firstAttribute="leading" secondItem="1Wa-xg-beA" secondAttribute="trailing" constant="6" id="82k-eP-ye2"/>
+                    <constraint firstAttribute="trailing" secondItem="hvP-mf-1tC" secondAttribute="trailing" id="GIa-oo-hiE"/>
+                    <constraint firstItem="Rl4-6S-yxg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="K7X-6l-9Az"/>
+                    <constraint firstItem="83t-Zf-I9s" firstAttribute="centerY" secondItem="8og-wo-tPB" secondAttribute="centerY" id="KdC-Ae-W8o"/>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="centerY" secondItem="oCL-R8-Zst" secondAttribute="centerY" constant="-6" id="LLU-GR-cHA"/>
+                    <constraint firstItem="oCL-R8-Zst" firstAttribute="leading" secondItem="R3O-xo-63d" secondAttribute="trailing" constant="7" id="M5W-wE-TzR"/>
+                    <constraint firstItem="Fur-79-TPa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Paf-YE-7lc"/>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="centerY" secondItem="Ud9-ZT-Hws" secondAttribute="centerY" constant="1" id="S33-q5-HH2"/>
+                    <constraint firstItem="rN9-89-NNu" firstAttribute="top" secondItem="5xU-kc-YFJ" secondAttribute="top" id="SCV-Gb-ipp"/>
+                    <constraint firstItem="xjj-WQ-n1h" firstAttribute="leading" secondItem="5xU-kc-YFJ" secondAttribute="trailing" constant="5" id="Sdd-dw-6V6"/>
+                    <constraint firstItem="Rl4-6S-yxg" firstAttribute="top" secondItem="1Wa-xg-beA" secondAttribute="bottom" constant="15" id="Srx-DW-SUV"/>
+                    <constraint firstItem="Ud9-ZT-Hws" firstAttribute="leading" secondItem="wk9-uX-ZcA" secondAttribute="trailing" constant="5" id="Vbv-w7-bDC"/>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="leading" secondItem="Ud9-ZT-Hws" secondAttribute="trailing" constant="8" id="X52-c4-gca"/>
+                    <constraint firstAttribute="bottom" secondItem="hvP-mf-1tC" secondAttribute="bottom" id="d70-v0-PUA"/>
+                    <constraint firstItem="wk9-uX-ZcA" firstAttribute="leading" secondItem="rZo-td-tm6" secondAttribute="trailing" constant="3" id="f6X-nJ-QsQ"/>
+                    <constraint firstItem="5xU-kc-YFJ" firstAttribute="leading" secondItem="rN9-89-NNu" secondAttribute="trailing" constant="29" id="hdC-Tw-CDV"/>
+                    <constraint firstItem="83t-Zf-I9s" firstAttribute="leading" secondItem="8og-wo-tPB" secondAttribute="trailing" constant="7" id="hpt-BA-zCA"/>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="centerY" secondItem="rZo-td-tm6" secondAttribute="centerY" id="iES-Mp-l9y"/>
+                    <constraint firstItem="1Wa-xg-beA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="kML-dT-RzG"/>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="top" secondItem="Rl4-6S-yxg" secondAttribute="top" id="n8t-jU-T4K"/>
+                    <constraint firstItem="wk9-uX-ZcA" firstAttribute="top" secondItem="5xU-kc-YFJ" secondAttribute="bottom" constant="15" id="nko-SC-ckz"/>
+                    <constraint firstItem="1Wa-xg-beA" firstAttribute="top" secondItem="Fur-79-TPa" secondAttribute="bottom" constant="10" id="oFY-Dd-UvZ"/>
+                    <constraint firstItem="Fur-79-TPa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oSs-9x-Gfn"/>
+                    <constraint firstItem="rN9-89-NNu" firstAttribute="baseline" secondItem="xjj-WQ-n1h" secondAttribute="baseline" id="tgs-BR-dSY"/>
+                    <constraint firstItem="hvP-mf-1tC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="w2w-dd-cn0"/>
+                    <constraint firstItem="R3O-xo-63d" firstAttribute="leading" secondItem="8og-wo-tPB" secondAttribute="leading" id="zXm-fg-cUg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="admissionImageView" destination="R3O-xo-63d" id="VTj-VO-b4q"/>
+                <outlet property="alcoholImageView" destination="8og-wo-tPB" id="luK-sQ-p2z"/>
+                <outlet property="boysAllowedImageView" destination="wk9-uX-ZcA" id="bdp-BR-lPk"/>
+                <outlet property="girlAllowedImageView" destination="Rl4-6S-yxg" id="jvT-Gm-BCU"/>
+                <outlet property="nonVegImageView" destination="5xU-kc-YFJ" id="QnB-G1-XdK"/>
+                <outlet property="smokingImageView" destination="1Wa-xg-beA" id="ajP-1a-sDu"/>
+            </connections>
+            <point key="canvasLocation" x="277" y="279"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="red_cross" width="16" height="16"/>
+    </resources>
+</document>

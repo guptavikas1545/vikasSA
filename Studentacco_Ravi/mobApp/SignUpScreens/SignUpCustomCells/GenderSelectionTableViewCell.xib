@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell tag="101" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="genderSelectionTableViewCell" rowHeight="81" id="KGk-i7-Jjw" customClass="GenderSelectionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGK-jv-PxK">
+                        <rect key="frame" x="20" y="4" width="83" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu8-PH-4sN">
+                        <rect key="frame" x="182" y="38" width="56" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Male" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-hB-LFR">
+                        <rect key="frame" x="50" y="38" width="37" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE7-m5-4SJ" userLabel="female">
+                        <rect key="frame" x="146" y="41" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Qp0-NO-fB9"/>
+                            <constraint firstAttribute="width" constant="16" id="ik3-MS-0Ho"/>
+                        </constraints>
+                        <state key="normal" image="radio-button"/>
+                    </button>
+                    <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyp-LN-JT2" userLabel="male">
+                        <rect key="frame" x="20" y="41" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="7Wu-5T-68v"/>
+                            <constraint firstAttribute="height" constant="16" id="ssl-0v-A11"/>
+                        </constraints>
+                        <state key="normal" image="radio-button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kdy-hB-LFR" firstAttribute="leading" secondItem="eyp-LN-JT2" secondAttribute="trailing" constant="14" id="81w-GG-1aj"/>
+                    <constraint firstItem="eyp-LN-JT2" firstAttribute="top" secondItem="UGK-jv-PxK" secondAttribute="bottom" constant="16" id="IV4-VE-Cag"/>
+                    <constraint firstAttribute="bottom" secondItem="eyp-LN-JT2" secondAttribute="bottom" constant="23" id="Nim-uw-T6m"/>
+                    <constraint firstAttribute="bottom" secondItem="Kdy-hB-LFR" secondAttribute="bottom" constant="21" id="aFQ-tX-YiH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yE7-m5-4SJ" secondAttribute="bottom" constant="15" id="cMv-0s-pRd"/>
+                    <constraint firstItem="eyp-LN-JT2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="d5P-md-e6f"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Wu8-PH-4sN" secondAttribute="bottom" constant="13" id="dk7-lb-nSA"/>
+                    <constraint firstItem="Wu8-PH-4sN" firstAttribute="leading" secondItem="yE7-m5-4SJ" secondAttribute="trailing" constant="20" id="ka1-AJ-4U8"/>
+                    <constraint firstItem="UGK-jv-PxK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="pef-b4-TZR"/>
+                    <constraint firstItem="Kdy-hB-LFR" firstAttribute="top" secondItem="UGK-jv-PxK" secondAttribute="bottom" constant="13" id="rFH-Qt-Vqv"/>
+                    <constraint firstItem="UGK-jv-PxK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="v1f-ec-aUi"/>
+                    <constraint firstItem="yE7-m5-4SJ" firstAttribute="leading" secondItem="Kdy-hB-LFR" secondAttribute="trailing" constant="59" id="wvO-Mf-qbb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="femaleSelectionButton" destination="yE7-m5-4SJ" id="PCm-vX-uAy"/>
+                <outlet property="maleSelectionButton" destination="eyp-LN-JT2" id="TrE-D5-bnG"/>
+                <outlet property="titleNameLabel" destination="UGK-jv-PxK" id="IkD-ZB-69i"/>
+            </connections>
+            <point key="canvasLocation" x="189" y="281.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="radio-button" width="16" height="16"/>
+    </resources>
+</document>

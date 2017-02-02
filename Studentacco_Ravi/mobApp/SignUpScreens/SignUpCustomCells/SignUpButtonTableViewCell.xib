@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell tag="102" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="signUpButtonTableViewCell" rowHeight="55" id="KGk-i7-Jjw" customClass="SignUpButtonTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bD-TU-Fct">
+                        <rect key="frame" x="15" y="0.0" width="290" height="37"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.25882352939999997" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="19"/>
+                        <state key="normal" title="Submit">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="3bD-TU-Fct" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="MrC-7w-IQZ"/>
+                    <constraint firstItem="3bD-TU-Fct" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dmJ-eg-r1Z"/>
+                    <constraint firstAttribute="trailing" secondItem="3bD-TU-Fct" secondAttribute="trailing" constant="15" id="i8D-88-WvM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="submitButton" destination="3bD-TU-Fct" id="RqQ-zC-o0v"/>
+            </connections>
+            <point key="canvasLocation" x="430" y="265.5"/>
+        </tableViewCell>
+    </objects>
+</document>

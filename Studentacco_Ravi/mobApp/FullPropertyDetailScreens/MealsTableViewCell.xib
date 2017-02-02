@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Bold.otf">
+            <string>CircularStd-Bold</string>
+        </mutableArray>
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealsTableViewCellId" rowHeight="87" id="KGk-i7-Jjw" customClass="MealsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEALS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsf-yo-lit">
+                        <rect key="frame" x="20" y="16" width="59" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gzY-FY-K5N"/>
+                            <constraint firstAttribute="width" constant="59" id="xx1-t0-Yj2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-3Q-4dC">
+                        <rect key="frame" x="247" y="38" width="44" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="LW3-ia-tOI"/>
+                            <constraint firstAttribute="width" constant="44" id="oti-RU-hQm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-ll-mWh">
+                        <rect key="frame" x="0.0" y="78" width="320" height="8"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90980392160000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="8" id="mFN-yI-uME"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYn-XB-bbD">
+                        <rect key="frame" x="141" y="38" width="39" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="39" id="IfJ-Cj-yNH"/>
+                            <constraint firstAttribute="height" constant="21" id="oSJ-Y0-B6M"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Included)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-Kz-qDG">
+                        <rect key="frame" x="247" y="56" width="55" height="16"/>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Included)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-ug-ReI">
+                        <rect key="frame" x="141" y="56" width="55" height="16"/>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LJU-YI-gM0">
+                        <rect key="frame" x="20" y="41" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="6EF-QT-m3m"/>
+                            <constraint firstAttribute="width" constant="16" id="brA-uF-lXZ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Az-hG-vUh">
+                        <rect key="frame" x="121" y="41" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="ckT-dK-J8J"/>
+                            <constraint firstAttribute="width" constant="16" id="y0g-hL-Rjx"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J5J-Pg-GbG">
+                        <rect key="frame" x="226" y="41" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="2mV-8E-OnF"/>
+                            <constraint firstAttribute="width" constant="16" id="Q5K-TS-WeO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aiw-y3-2Nx">
+                        <rect key="frame" x="41" y="38" width="55" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="4u8-U6-xf2"/>
+                            <constraint firstAttribute="height" constant="21" id="bVt-YH-P84"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Included)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyK-HJ-o2y">
+                        <rect key="frame" x="41" y="56" width="55" height="16"/>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DMs-Kz-qDG" firstAttribute="leading" secondItem="J5J-Pg-GbG" secondAttribute="trailing" constant="5" id="4bi-CB-qW1"/>
+                    <constraint firstItem="wYn-XB-bbD" firstAttribute="leading" secondItem="Aiw-y3-2Nx" secondAttribute="trailing" constant="45" id="6nx-Ky-CEE"/>
+                    <constraint firstAttribute="trailing" secondItem="vMc-ll-mWh" secondAttribute="trailing" id="9qN-SU-F70"/>
+                    <constraint firstItem="Fsf-yo-lit" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Bqv-jp-caD"/>
+                    <constraint firstItem="vMc-ll-mWh" firstAttribute="top" secondItem="0Az-hG-vUh" secondAttribute="bottom" constant="21" id="H9n-rJ-s1G"/>
+                    <constraint firstItem="UC5-ug-ReI" firstAttribute="leading" secondItem="0Az-hG-vUh" secondAttribute="trailing" constant="4" id="Ixk-DZ-1w1"/>
+                    <constraint firstItem="lkT-3Q-4dC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="PMs-eC-idN"/>
+                    <constraint firstItem="UC5-ug-ReI" firstAttribute="leading" secondItem="wYn-XB-bbD" secondAttribute="leading" id="VHG-bS-G6Z"/>
+                    <constraint firstItem="DMs-Kz-qDG" firstAttribute="leading" secondItem="lkT-3Q-4dC" secondAttribute="leading" id="X4U-Gb-jWY"/>
+                    <constraint firstItem="DMs-Kz-qDG" firstAttribute="top" secondItem="lkT-3Q-4dC" secondAttribute="bottom" constant="-3" id="Xpf-xn-3Ix"/>
+                    <constraint firstItem="HyK-HJ-o2y" firstAttribute="top" secondItem="Aiw-y3-2Nx" secondAttribute="bottom" constant="-3" id="b9O-DJ-tdp"/>
+                    <constraint firstItem="lkT-3Q-4dC" firstAttribute="leading" secondItem="wYn-XB-bbD" secondAttribute="trailing" constant="67" id="e0r-GE-6fZ"/>
+                    <constraint firstItem="vMc-ll-mWh" firstAttribute="top" secondItem="LJU-YI-gM0" secondAttribute="bottom" constant="21" id="hGC-JK-a9x"/>
+                    <constraint firstItem="vMc-ll-mWh" firstAttribute="top" secondItem="J5J-Pg-GbG" secondAttribute="bottom" constant="21" id="het-gu-Xf4"/>
+                    <constraint firstItem="Fsf-yo-lit" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="jjo-JA-qpr"/>
+                    <constraint firstItem="Aiw-y3-2Nx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="41" id="kzC-Un-vM5"/>
+                    <constraint firstItem="vMc-ll-mWh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="l2N-el-dsN"/>
+                    <constraint firstItem="HyK-HJ-o2y" firstAttribute="leading" secondItem="Aiw-y3-2Nx" secondAttribute="leading" id="lNG-2U-G3d"/>
+                    <constraint firstItem="Aiw-y3-2Nx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="lOz-uY-65l"/>
+                    <constraint firstAttribute="bottom" secondItem="vMc-ll-mWh" secondAttribute="bottom" id="mWn-39-xFE"/>
+                    <constraint firstItem="wYn-XB-bbD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="odq-Lu-pJv"/>
+                    <constraint firstItem="UC5-ug-ReI" firstAttribute="top" secondItem="wYn-XB-bbD" secondAttribute="bottom" constant="-3" id="uP4-jH-rU9"/>
+                    <constraint firstItem="LJU-YI-gM0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="x2d-Go-yZM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="breakfastAmountLabel" destination="HyK-HJ-o2y" id="niB-lP-xIo"/>
+                <outlet property="breakfastImageView" destination="LJU-YI-gM0" id="JYa-1d-JWJ"/>
+                <outlet property="breakfastLabel" destination="Aiw-y3-2Nx" id="mez-I9-zY7"/>
+                <outlet property="dinnerAmountLabel" destination="DMs-Kz-qDG" id="d4m-Cd-s4e"/>
+                <outlet property="dinnerImageView" destination="J5J-Pg-GbG" id="mIX-2U-oeN"/>
+                <outlet property="dinnerLabel" destination="lkT-3Q-4dC" id="t7C-O8-N4N"/>
+                <outlet property="lunchAmountLabel" destination="UC5-ug-ReI" id="io3-Bp-ydz"/>
+                <outlet property="lunchImageView" destination="0Az-hG-vUh" id="tgc-QR-bRr"/>
+                <outlet property="lunchLabel" destination="wYn-XB-bbD" id="f9Q-Cr-eCD"/>
+            </connections>
+            <point key="canvasLocation" x="242" y="275.5"/>
+        </tableViewCell>
+    </objects>
+</document>

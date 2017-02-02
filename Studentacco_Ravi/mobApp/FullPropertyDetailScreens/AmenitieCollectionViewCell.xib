@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AmenitieCollectionViewCell" id="gTV-IL-0wX" customClass="AmenitieCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="157" height="54"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="157" height="54"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_cross" translatesAutoresizingMaskIntoConstraints="NO" id="Eli-80-YSS">
+                        <rect key="frame" x="8" y="19" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="FfO-q5-xJy"/>
+                            <constraint firstAttribute="width" constant="16" id="uB1-mA-k9M"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TV-Room" translatesAutoresizingMaskIntoConstraints="NO" id="1DR-aC-oWd">
+                        <rect key="frame" x="27" y="19" width="16" height="16"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="TV Room" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTF-2e-OSG">
+                        <rect key="frame" x="48" y="11" width="109" height="31"/>
+                        <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="yTF-2e-OSG" firstAttribute="leading" secondItem="1DR-aC-oWd" secondAttribute="trailing" constant="5" id="1y4-yQ-hhl"/>
+                <constraint firstItem="Eli-80-YSS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="D88-52-0h1"/>
+                <constraint firstAttribute="trailing" secondItem="yTF-2e-OSG" secondAttribute="trailing" id="HGR-Ip-ZoZ"/>
+                <constraint firstItem="1DR-aC-oWd" firstAttribute="leading" secondItem="Eli-80-YSS" secondAttribute="trailing" constant="3" id="WAS-tf-jRE"/>
+                <constraint firstAttribute="bottom" secondItem="yTF-2e-OSG" secondAttribute="bottom" constant="12" id="aTB-pp-el1"/>
+                <constraint firstItem="yTF-2e-OSG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="11" id="rCW-BR-GJM"/>
+                <constraint firstItem="1DR-aC-oWd" firstAttribute="centerY" secondItem="Eli-80-YSS" secondAttribute="centerY" id="v7j-9K-GeC"/>
+                <constraint firstItem="Eli-80-YSS" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="w5q-2r-llc"/>
+            </constraints>
+            <size key="customSize" width="157" height="49"/>
+            <connections>
+                <outlet property="amenitieImageView" destination="1DR-aC-oWd" id="CWu-6K-bNG"/>
+                <outlet property="amenitieTitleLabel" destination="yTF-2e-OSG" id="NlZ-GV-ka8"/>
+                <outlet property="selectionImageView" destination="Eli-80-YSS" id="CQR-lh-Mga"/>
+            </connections>
+            <point key="canvasLocation" x="261.5" y="211"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="TV-Room" width="16" height="16"/>
+        <image name="red_cross" width="16" height="16"/>
+    </resources>
+</document>
