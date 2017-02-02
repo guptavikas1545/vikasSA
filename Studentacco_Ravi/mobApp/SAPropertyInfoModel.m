@@ -6,23 +6,23 @@
 //  Copyright (c) 2015 ClearToken. All rights reserved.
 //
 
-#import "ClTDeviceiInfoModel.h"
+#import "SAPropertyInfoModel.h"
 #import "Constant.h"
 
-@implementation ClTDeviceiInfoModel
+@implementation SAPropertyInfoModel
 
 /**************************************************************************************
  //create the singleton instance of ClTDeviceiInfoModel class
  **************************************************************************************/
 
 
-+(ClTDeviceiInfoModel*)sharedInstance{
++(SAPropertyInfoModel*)sharedInstance{
     
-    static ClTDeviceiInfoModel *sharedInstance = nil;
+    static SAPropertyInfoModel *sharedInstance = nil;
     static dispatch_once_t oncePedicate;
     dispatch_once(&oncePedicate, ^{
         
-        sharedInstance = [[ClTDeviceiInfoModel alloc] init];
+        sharedInstance = [[SAPropertyInfoModel alloc] init];
     });
     return sharedInstance;
 }
@@ -50,6 +50,7 @@
         _discountPrice =0;
         _gpsLattitude=@"";
         _gpsLongitude=@"";
+        _roomsAvailable =@"";
         
         _propertyCount=0;
         
@@ -74,24 +75,24 @@
     
     NSLog(@"FillDevice== %@",responseDictionary);
     
-    NSMutableArray *tempPropetyListArray = [[NSMutableArray alloc]init];
+    NSMutableArray *tempPropertyListArray = [[NSMutableArray alloc]init];
     
     NSMutableArray *propertyListArray = [[NSMutableArray alloc]initWithArray:[responseDictionary valueForKey:@"property_list"]];
     
-    for (ClTDeviceiInfoModel *propertyDetail in propertyListArray ){
+    for (SAPropertyInfoModel *propertyDetail in propertyListArray ){
         
-        ClTDeviceiInfoModel *deviceiInfoModel= [[ClTDeviceiInfoModel alloc]init];
+        SAPropertyInfoModel *propertyInfoModel= [[SAPropertyInfoModel alloc]init];
         
-        [deviceiInfoModel setAddressLocality:[propertyDetail valueForKey:@"address_locality"]];
-        [deviceiInfoModel setAddressCity:[propertyDetail valueForKey:@"address_city"]];
-        [deviceiInfoModel setRent:[propertyDetail valueForKey:@"rent"]];
-        [deviceiInfoModel setFullImagePath:[propertyDetail valueForKey:@"full_image_path"]];
+        [propertyInfoModel setAddressLocality:[propertyDetail valueForKey:@"address_locality"]];
+        [propertyInfoModel setAddressCity:[propertyDetail valueForKey:@"address_city"]];
+        [propertyInfoModel setRent:[propertyDetail valueForKey:@"rent"]];
+        [propertyInfoModel setFullImagePath:[propertyDetail valueForKey:@"full_image_path"]];
         
-        [deviceiInfoModel setDiscountPrice:[propertyDetail valueForKey:@"discount_price"]];
+        [propertyInfoModel setDiscountPrice:[propertyDetail valueForKey:@"discount_price"]];
         
-        [tempPropetyListArray addObject:deviceiInfoModel];
+        [tempPropertyListArray addObject:propertyInfoModel];
     }
-    return tempPropetyListArray;
+    return tempPropertyListArray;
 }
 
 
@@ -100,8 +101,8 @@
     NSMutableArray *tempPropetyListArray = [[NSMutableArray alloc]init];
     NSMutableArray *propertyListArray = [[NSMutableArray alloc]initWithArray:[responseDictionary valueForKey:@"property_list"]];
     
-    for (ClTDeviceiInfoModel *propertyDetail in propertyListArray ){
-        ClTDeviceiInfoModel *deviceiInfoModel= [[ClTDeviceiInfoModel alloc]init];
+    for (SAPropertyInfoModel *propertyDetail in propertyListArray ){
+        SAPropertyInfoModel *deviceiInfoModel= [[SAPropertyInfoModel alloc]init];
         NSLog(@"discount_price=%@", [propertyDetail valueForKey:@"discount_price"]);
         if ([[propertyDetail valueForKey:@"discount_price"] doubleValue] >0){
             [deviceiInfoModel setAddressLocality:[propertyDetail valueForKey:@"address_locality"]];
@@ -120,8 +121,8 @@
     NSMutableArray *tempPropetyListArray = [[NSMutableArray alloc]init];
     NSMutableArray *propertyListArray = [[NSMutableArray alloc]initWithArray:[responseDictionary valueForKey:@"property_list"]];
     
-    for (ClTDeviceiInfoModel *propertyDetail in propertyListArray ){
-        ClTDeviceiInfoModel *deviceiInfoModel= [[ClTDeviceiInfoModel alloc]init];
+    for (SAPropertyInfoModel *propertyDetail in propertyListArray ){
+        SAPropertyInfoModel *deviceiInfoModel= [[SAPropertyInfoModel alloc]init];
       
             [deviceiInfoModel setAddressLocality:[propertyDetail valueForKey:@"address_locality"]];
             [deviceiInfoModel setAddressCity:[propertyDetail valueForKey:@"address_city"]];
@@ -139,6 +140,29 @@
 }
 
 
+-(NSMutableArray*)fillPropertyModelForPopularProperties:(NSDictionary*)responseDictionary  {
+    NSLog(@"FillDevice== %@",responseDictionary);
+    NSMutableArray *tempPropetyListArray = [[NSMutableArray alloc]init];
+    NSMutableArray *propertyListArray = [[NSMutableArray alloc]initWithArray:[responseDictionary valueForKey:@"property_list"]];
+    
+    for (SAPropertyInfoModel *propertyDetail in propertyListArray ){
+        SAPropertyInfoModel *deviceiInfoModel= [[SAPropertyInfoModel alloc]init];
+        
+        [deviceiInfoModel setAddressLocality:[propertyDetail valueForKey:@"address_locality"]];
+        [deviceiInfoModel setAddressCity:[propertyDetail valueForKey:@"address_city"]];
+        [deviceiInfoModel setRent:[propertyDetail valueForKey:@"rent"]];
+        [deviceiInfoModel setFullImagePath:[propertyDetail valueForKey:@"full_image_path"]];
+        [deviceiInfoModel setDiscountPrice:[propertyDetail valueForKey:@"discount_price"]];
+        
+        [deviceiInfoModel setGpsLongitude:[propertyDetail valueForKey:@"gps_longitude"]];
+        [deviceiInfoModel setGpsLattitude:[propertyDetail valueForKey:@"gps_lattitude"]];
+          [deviceiInfoModel setRoomsAvailable:[propertyDetail valueForKey:@"rooms_available"]];
+        
+        [tempPropetyListArray addObject:deviceiInfoModel];
+        
+    }
+    return tempPropetyListArray;
+}
 
 
 

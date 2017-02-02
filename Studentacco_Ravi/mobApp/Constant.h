@@ -24,6 +24,8 @@ typedef enum ServiceIdentifier
     kGetBigSaving,
     kGetBrandedRooms,
     kPostNearByProperty,
+    kGetPopularPropeties,
+    
     
     kGetDeviceInfo,
     kGetDeviceToken,

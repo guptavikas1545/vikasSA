@@ -118,6 +118,9 @@
         case kPostNearByProperty:
             return @"near_by_property.php";
             break;
+        case kGetPopularPropeties:
+            return @"popular_properties.php";
+            break;
         default:
             return @"";
             break;

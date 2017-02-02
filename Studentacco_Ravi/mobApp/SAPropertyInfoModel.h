@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ClTDeviceiInfoModel : NSObject
+@interface SAPropertyInfoModel : NSObject
 
 // use in branded API
 @property (strong,nonatomic) NSString *addressLocality;
@@ -21,6 +21,8 @@
 @property (strong,nonatomic) NSString *gpsLattitude;
 @property (strong,nonatomic) NSString  *gpsLongitude;
 @property (strong,nonatomic) NSNumber *propertyCount;
+// use in Popular propeties API
+@property (strong, nonatomic) NSString *roomsAvailable;
 
 
 //@property (strong,nonatomic) NSString *stringCurrentStatus;
@@ -38,9 +40,10 @@
 //@property (strong,nonatomic) NSString *stringZone;
 
 
-+(ClTDeviceiInfoModel*)sharedInstance;
++(SAPropertyInfoModel*)sharedInstance;
 
--(ClTDeviceiInfoModel*)fillDeviceInfoModel:(NSDictionary*)responseDictionary; 
--(ClTDeviceiInfoModel*)fillPropertyModelForBigSaving:(NSDictionary*)responseDictionary;
--(ClTDeviceiInfoModel*)fillPropertyModelNearByProperty:(NSDictionary*)responseDictionary;
+-(SAPropertyInfoModel*)fillDeviceInfoModel:(NSDictionary*)responseDictionary;
+-(SAPropertyInfoModel*)fillPropertyModelForBigSaving:(NSDictionary*)responseDictionary;
+-(SAPropertyInfoModel*)fillPropertyModelNearByProperty:(NSDictionary*)responseDictionary;
+-(SAPropertyInfoModel*)fillPropertyModelForPopularProperties:(NSDictionary*)responseDictionary;
 @end

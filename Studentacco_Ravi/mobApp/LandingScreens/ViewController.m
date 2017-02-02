@@ -7,12 +7,14 @@
 //
 //ravi
 #import "ClTWebservice.h"
-#import "ClTDeviceiInfoModel.h"
+#import "SAPropertyInfoModel.h"
 #import "HomeCollectionViewCell.h"
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 //***//
-
+#import "SDWebImageDownloader.h"
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
 #import "OuterCollectionViewCell.h"
 #import "AboutUsCollectionViewCell.h"
 #import "BannerCollectionViewCell.h"
@@ -42,13 +44,14 @@
     NSMutableArray *brandedPropertyList;
     //__weak IBOutlet UILabel *cityLabel;
     
-    ClTDeviceiInfoModel *tempDeviceModel;
+    SAPropertyInfoModel *tempDeviceModel;
     
     NSMutableArray *bigSavingModelsArray;
     NSMutableArray *brandedRoomsModelsArray;
     NSMutableArray *nearByPropertiesModelsArray;
-    __weak IBOutlet NSLayoutConstraint *delhiLeadingConstraint;
+    NSMutableArray *popularPropertiesModelsArray;
     
+    __weak IBOutlet NSLayoutConstraint *delhiLeadingConstraint;
     __weak IBOutlet NSLayoutConstraint *FaridabadLeadingConstaint;
     __weak IBOutlet NSLayoutConstraint *gurgoanLeadingConstraint;
     __weak IBOutlet NSLayoutConstraint *noidaLeadingCOnstraint;
@@ -61,12 +64,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-     tempDeviceModel = [[ClTDeviceiInfoModel alloc]init];
+     tempDeviceModel = [[SAPropertyInfoModel alloc]init];
        //     [self fetchPropertyListData];
     // Ravi
     bigSavingModelsArray = [[NSMutableArray alloc]init];
     brandedRoomsModelsArray = [[NSMutableArray alloc]init];
     nearByPropertiesModelsArray = [[NSMutableArray alloc]init];
+    popularPropertiesModelsArray = [[NSMutableArray alloc]init];
+    
+    // input View
+    
+    UIView *padding = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 60, 45)];
+    UIImageView *searchImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 4, 40, 40)];
+    searchImageView.image = [UIImage imageNamed:@"ic_search_grey_small.png"];
+    [padding addSubview:searchImageView];
+    _searchTextField.leftView = padding;
+    _searchTextField.leftViewMode =UITextFieldViewModeAlways;
+    
+  
+
     
         // Search Text Field
     _searchTextField.layer.cornerRadius = 22.0f;
@@ -75,11 +91,18 @@
     // ALert Button UI
     _createAlertButton.layer.cornerRadius = 15.0f;
     _createAlertButton.layer.borderWidth=1.0f;
-    _createAlertButton.layer.borderColor=[UIColor blueColor].CGColor;
+    _createAlertButton.layer.borderColor=_createAlertButton.tintColor.CGColor;
+    
+    float citiesLeadingConstant = (self.view.frame.size.width-(57*4)-48)/3;
+   // delhiLeadingConstraint.constant =citiesLeadingConstant;
+    FaridabadLeadingConstaint.constant=citiesLeadingConstant;
+    gurgoanLeadingConstraint.constant=citiesLeadingConstant;
+    noidaLeadingCOnstraint.constant=citiesLeadingConstant;
     
     [self getBigSavingDataFromAPI];
     [self getBrandedRoomsDataFromAPI];
     [self postNearByPropertyAPI];
+    [self getPopularPropertiesDataFromAPI];
     
     
     
@@ -128,6 +151,8 @@
         return brandedRoomsModelsArray.count;
     }else if(collectionView == _bigSavingCollectionView){
         return bigSavingModelsArray.count;
+    }else if (collectionView == _popularApartmentCollectionView){
+        return popularPropertiesModelsArray.count;
     }else
         return 0;
 }
@@ -142,17 +167,56 @@
     if (collectionView == _brandedRoomsCollectionView){
         homeCell.address1Label.text = [brandedRoomsModelsArray[indexPath.row] addressLocality];
         homeCell.address2Label.text = [brandedRoomsModelsArray[indexPath.row] addressCity];
-        //homeCell.PropertyImage.image = [bigSavingModelsArray[indexPath.row] fullImagePath] ;
+        
+                               
+        NSURL * imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@",[brandedRoomsModelsArray[indexPath.row] fullImagePath]]];
+        NSLog(@"ImageURL %@=",imageURL);
+        [homeCell.PropertyImage sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder.png"] completed:^(UIImage *  image, NSError *  error, SDImageCacheType SDWebImageRefreshCached, NSURL *  imageURL) {
+            
+        }];
+        
+//        [homeCell.PropertyImage sd_setImageWithURL:]
+//                     placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
         homeCell.amountLabel.text = [NSString localizedStringWithFormat:@"₹%@",[brandedRoomsModelsArray[indexPath.row] rent]];
         
     }else if(collectionView == _bigSavingCollectionView){
         homeCell.address1Label.text = [bigSavingModelsArray[indexPath.row] addressLocality];
         homeCell.address2Label.text = [bigSavingModelsArray[indexPath.row] addressCity];
         //homeCell.PropertyImage.image = [bigSavingModelsArray[indexPath.row] fullImagePath] ;
+        
+        NSURL * imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@",[bigSavingModelsArray[indexPath.row] fullImagePath]]];
+        NSLog(@"ImageURL %@=",imageURL);
+        [homeCell.PropertyImage sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder.png"] completed:^(UIImage *  image, NSError *  error, SDImageCacheType SDWebImageRefreshCached, NSURL *  imageURL) {
+            
+        }];
+        
         int discountedPrice = [[bigSavingModelsArray[indexPath.row] rent] doubleValue] - [[bigSavingModelsArray[indexPath.row] discountPrice] doubleValue];
         homeCell.amountLabel.text =   [NSString localizedStringWithFormat:@"₹%d", discountedPrice];
-        homeCell.onwardsLabel.text = [NSString localizedStringWithFormat:@"₹%@",[bigSavingModelsArray[indexPath.row] rent]];
+        // set attributed string
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString localizedStringWithFormat:@"₹%@",  [bigSavingModelsArray[indexPath.row] rent]]];
+                                      // making text property to strike text- NSStrikethroughStyleAttributeName
+                                      [attributedString addAttribute: NSStrikethroughStyleAttributeName value:[NSNumber numberWithInteger: NSUnderlineStyleSingle] range: NSMakeRange(0, [attributedString length])];
+                                      // using text on label
+            [homeCell.onwardsLabel  setAttributedText: attributedString];
+                                      
+                                    
+
         [homeCell.onwardsLabel setFont:[UIFont systemFontOfSize:17]];
+
+    
+    }else if(collectionView == _popularApartmentCollectionView){
+     homeCell.address1Label.text = [popularPropertiesModelsArray[indexPath.row] addressLocality];
+         homeCell.roomsAvailableLable.text =[NSString localizedStringWithFormat:@"%@ Rooms Available", [popularPropertiesModelsArray[indexPath.row] roomsAvailable]];
+         homeCell.amountLabel.text =  [NSString localizedStringWithFormat:@"₹%@", [popularPropertiesModelsArray[indexPath.row] rent]];
+         //homeCell.PropertyImage.image = [popularPropertiesModelsArray[indexPath.row] fullImagePath] ;
+        
+        NSURL * imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@",[popularPropertiesModelsArray[indexPath.row] fullImagePath]]];
+        NSLog(@"ImageURL %@=",imageURL);
+        [homeCell.PropertyImage sd_setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder.png"] completed:^(UIImage *  image, NSError *  error, SDImageCacheType SDWebImageRefreshCached, NSURL *  imageURL) {
+            
+            
+        }];
+        
     }
     homeCell.layer.borderWidth=1.0f;
     [homeCell.layer setBorderColor:[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.2f].CGColor];
@@ -189,7 +253,7 @@
 -(void) addAnotationsOnMapView{
     
     MKCoordinateRegion region =  { {0.0, 0.0 }, { 0.0, 0.0 } };
-    for (ClTDeviceiInfoModel *propertyDetail in nearByPropertiesModelsArray ) {
+    for (SAPropertyInfoModel *propertyDetail in nearByPropertiesModelsArray ) {
         CLLocationCoordinate2D coord;
         coord.latitude=[propertyDetail.gpsLattitude floatValue];
         coord.longitude=[propertyDetail.gpsLongitude floatValue];
@@ -280,5 +344,15 @@
 }
 
 
+-(void)getPopularPropertiesDataFromAPI{
+    
+    NSDictionary *infoParams=[[NSDictionary alloc]initWithObjectsAndKeys:@"xyz",@"device", nil];
+    [[ClTWebservice sharedInstance] callWebserviceWithServiceIdentifier:kGetPopularPropeties params:[infoParams mutableCopy] requestType:kGet Oncompletion:^(NSMutableDictionary *response) {
+        popularPropertiesModelsArray = (NSMutableArray *)[tempDeviceModel  fillPropertyModelForPopularProperties:response];
+        [_popularApartmentCollectionView reloadData];
+    }OnFailure:^(NSError *error) {
+    }nullResponse:^{
+    }];
+}
 
 @end

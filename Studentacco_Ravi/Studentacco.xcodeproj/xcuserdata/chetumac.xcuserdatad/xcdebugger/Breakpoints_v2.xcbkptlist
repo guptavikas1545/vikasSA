@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mobApp/LandingScreens/ViewController.m"
-            timestampString = "507575530.861494"
+            timestampString = "507664008.953304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
-            landmarkName = "-postNearByPropertyAPI"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "-getBrandedRoomsDataFromAPI"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mobApp/LandingScreens/ViewController.m"
-            timestampString = "507575530.861494"
+            timestampString = "507664008.953304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-postNearByPropertyAPI"
-            landmarkType = "7">
+            startingLineNumber = "297"
+            endingLineNumber = "297"
+            landmarkName = "@implementation ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "mobApp/LandingScreens/ViewController.m"
-            timestampString = "507575530.861494"
+            timestampString = "507664008.953304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
-            landmarkName = "-postNearByPropertyAPI"
-            landmarkType = "7">
+            startingLineNumber = "298"
+            endingLineNumber = "298"
+            landmarkName = "@implementation ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
